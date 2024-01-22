@@ -1,0 +1,34 @@
+header{
+    padding: 5px 0;
+}
+header>h1{
+    text-align: center;
+    font-size: 24px;
+}
+ul{
+    padding-left: 0px;
+    list-style: none;
+    display:flex;
+    gap: 60px;
+}
+nav{
+    display: flex;
+    padding: 0 7vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+nav>div:first-of-type{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+img[src="images/Logo.png"]{
+    width: 5vw;
+}
+img[src="images/Hero Image.png"]{
+    width: 100%;
+}
