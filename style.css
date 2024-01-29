@@ -1,17 +1,32 @@
+body{
+    margin: 0;
+    font-family: 'Oswald', sans-serif
+}
+a{
+    text-decoration: none;
+    color: white;
+}
 header{
-    padding: 5px 0;
+    padding: 3px 0;
+    background-color: rgb(193, 193, 204);
 }
 header>h1{
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
 }
 ul{
     padding-left: 0px;
     list-style: none;
     display:flex;
-    gap: 60px;
+}
+img[src="images/Logo.png"]{
+    display: none;
 }
 nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 70px;
     display: flex;
     padding: 0 7vw;
     justify-content: space-between;
@@ -22,13 +37,84 @@ nav{
 nav>div:first-of-type{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     font-size: 30px;
     font-weight: 700;
 }
-img[src="images/Logo.png"]{
-    width: 5vw;
+
+ul{
+    padding-left: 0px;
+    list-style: none;
+    display:flex;
+    gap: 3vw;
 }
-img[src="images/Hero Image.png"]{
+.hero{
+    position: relative;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+}
+img[src="images/Hero Image Background.png"]{
+    filter: contrast(1);
+    object-fit: cover;
+}
+img[src="images/Hero Image Foreground.png"]{
+    position: absolute;
+    height: 75vh;
+    bottom: 0;
+}
+section div{
+    position: absolute;
+    color: white;
+    bottom: 5%;
     width: 100%;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);;
 }
+section h1{
+    margin-bottom: 14px;
+    font-size: 3rem;
+    
+}
+section p{
+    font-size: 1.7rem;
+    padding: 0 75px;
+}
+@media only screen and (min-width: 800px) {
+    
+    header>h1{
+        font-size: 13px;
+    }
+    .hero{
+        height: auto;
+    }
+    img[src="images/Logo.png"]{
+        display: block;
+        width: 3.5rem;
+    }
+    img[src="images/Hero Image Background.png"]{
+        width: 100vw;
+    }
+    img[src="images/Hero Image Foreground.png"]{
+        width: 35%;
+        bottom: 5%;
+        left: 5%;
+    }
+    section div{
+        top: 35%;
+        left: 55vw;
+        width: auto;
+    }
+    section h1{
+        margin-bottom: 14px;
+        padding: 0;
+        text-align: left;
+        font-size: calc(0.8rem + 4vw);
+    }
+    section p{
+        text-align: left;
+        font-size: 2vw;
+        margin: 0;
+        padding:0;
+    }
+  }
