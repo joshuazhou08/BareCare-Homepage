@@ -97,6 +97,7 @@ section p{
     }
     img[src="images/Hero Image Foreground.png"]{
         width: 35%;
+        height: auto;
         bottom: 5%;
         left: 5%;
     }
