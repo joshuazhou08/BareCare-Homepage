@@ -1,4 +1,8 @@
 
+:root{
+    --darkgray: rgb(12, 12, 12);
+    --darkblue: rgb(2, 4, 10);
+}
 body{
     margin: 0;
     font-family: 'Oswald', sans-serif
@@ -23,19 +27,22 @@ ul{
 .shadow{
     box-shadow: inset 0px 0px 37px 7px rgba(0,0,0,0.1);
 }
+.absolute{
+    position: absolute;
+}
 img[src="images/Logo.png"]{
     display: none;
 }
 nav{
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     height: 70px;
     display: flex;
     padding: 0 7vw;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--darkgray);
     color: white;
 }
 nav>div:first-of-type{
@@ -64,7 +71,6 @@ img[src="images/Hero Image Background.png"]{
     width: 100%;
 }
 img[src="images/Hero Image Foreground.png"]{
-    position: absolute;
     height: 75vh;
     object-fit: cover;
     width: 100%;
@@ -74,7 +80,6 @@ section{
     position: relative;
 }
 section .image-overlay{
-    position: absolute;
     color: white;
     bottom: 5%;
     width: 100%;
@@ -105,18 +110,53 @@ section p{
 }
 .curvature-display p {
     padding: 0 40px 40px;
+    margin-bottom: 0;
+    border-bottom: solid 10px var(--darkgray)
 }
 .curvature-display img{
     width: 100vw;
 }
 img[src="images/DingleBerries.png"]{
     filter: brightness(1.4);
+    border-top: solid 10px var(--darkgray)
 }
-@media only screen and (min-width: 800px) {
+/* For the blade closeup */
+.blade-closeup{
+    height: 80vh;
+    overflow:hidden;
+}
+img[src= "images/dark crevice.jpg"] {
+    top: -10vh;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    filter: brightness(0.4);
+    object-position: center 80%;
+}
+img[src="images/Blade Closeup.png"]{
+    width: 100vw;
+    left: 0;
+    bottom:0;
+}
+.blade-closeup h1, .blade-closeup p{
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+.blade-closeup p{
+    padding: 0 40px 0;
+}
+.blade-closeup>div:first-child{
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    position: relative;
+    z-index: 1;
+}
+@media screen and (min-width: 800px) {
     
     header>h1{
         font-size: 13px;
     }
+    /* For the hero section */
     .hero{
         height: auto;
     }
@@ -133,12 +173,12 @@ img[src="images/DingleBerries.png"]{
         bottom: 5%;
         left: 5%;
     }
-    section div{
+    .hero div{
         top: 35%;
         left: 55vw;
         width: auto;
     }
-    section h1{
+    .hero h1{
         margin-bottom: 14px;
         padding: 0;
         text-align: left;
@@ -166,6 +206,7 @@ img[src="images/DingleBerries.png"]{
         display: flex;
         flex-direction: column;
     }
+    /* For the curvature-display */
     .curvature-display h1{
         text-align: center;
         padding-top: 40px;
@@ -176,6 +217,9 @@ img[src="images/DingleBerries.png"]{
         position: static;
         order: 1;
     } 
+    .curvature-display p{
+        border-bottom: 0px;
+    }
     img[src="images/DingleBerries.png"]{
         height: 20vw;
         width: 20vw;
@@ -194,6 +238,36 @@ img[src="images/DingleBerries.png"]{
         order: 1;
         margin-bottom: -8vh;
         font-size: calc(8px + 1.5vw);
+    }
+    /* For the blade closeup */
+    .blade-closeup{
+        background-color: var(--darkblue);
+        height: 85vh;
+    }
+    img[src="images/Blade Closeup.png"]{
+        position: absolute;
+        width: min(40vw, 80vh);
+        height: auto;
+        left: calc(calc(45vw - min(40vw, 80vh))/2)
+    }
+    img[src= "images/dark crevice.jpg"] {
+        height: 120vh;
+        width: 45vw;
+        left: 0;
+        bottom: 20vh;
+    }
+    .blade-closeup>div:first-child{
+        background: transparent;
+    }
+    .blade-closeup h1, .blade-closeup p{
+        position: static;
+        color: white;
+        text-align: left;
+        margin-left: 45vw;
+        padding: 0 40px 0;
+    }
+    .blade-closeup h1{
+        margin-top: 30vh;
     }
 
   }
