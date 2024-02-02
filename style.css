@@ -30,9 +30,6 @@ ul{
 .absolute{
     position: absolute;
 }
-.flex{
-    display:flex;
-}
 img[src="images/Logo.png"]{
     display: none;
 }
@@ -155,6 +152,7 @@ img[src="images/Blade Closeup.png"]{
 }
 .blade-closeup > .flex {
     justify-content: center;
+    display: flex;
 }
 @media screen and (min-width: 800px) {
     
