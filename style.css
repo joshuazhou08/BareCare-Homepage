@@ -3,6 +3,17 @@
     --darkgray: rgb(12, 12, 12);
     --darkblue: rgb(2, 4, 10);
 }
+/* Feature Classes */
+.shadow{
+    box-shadow: inset 0px 0px 45px 0.8vh rgba(0,0,0,0.1);
+}
+.absolute{
+    position: absolute;
+}
+.full-width{
+    width: 100vw;
+}
+/* End of Feature Classes */
 body{
     margin: 0;
     font-family: 'Oswald', sans-serif
@@ -24,12 +35,7 @@ ul{
     list-style: none;
     display:flex;
 }
-.shadow{
-    box-shadow: inset 0px 0px 37px 7px rgba(0,0,0,0.1);
-}
-.absolute{
-    position: absolute;
-}
+
 img[src="images/Logo.png"]{
     display: none;
 }
@@ -57,7 +63,7 @@ ul{
     padding-left: 0px;
     list-style: none;
     display:flex;
-    gap: 3vw;
+    gap: 6vw;
 }
 /* For the Hero Section */
 .hero{
@@ -79,17 +85,17 @@ img[src="images/Hero Image Foreground.png"]{
 section{
     position: relative;
 }
-section .image-overlay{
+.hero .image-overlay{
     color: white;
     bottom: 5%;
-    width: 100%;
+
     text-align: center;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);;
 }
 section h1{
     margin-top: 0;
     margin-bottom: 14px;
-    padding-top: 50px;
+    padding: 50px 20px 0;
     font-size: 3rem;
     text-align: center;
     
@@ -98,6 +104,7 @@ section p{
     font-size: 1.7rem;
     padding: 0 75px 0;
     text-align: center;
+    margin: 0;
 }
 /* For the curvature-display */
 .curvature-display{
@@ -113,9 +120,7 @@ section p{
     margin-bottom: 0;
     border-bottom: solid 10px var(--darkgray)
 }
-.curvature-display img{
-    width: 100vw;
-}
+
 img[src="images/DingleBerries.png"]{
     filter: brightness(1.4);
     border-top: solid 10px var(--darkgray)
@@ -128,7 +133,6 @@ img[src="images/DingleBerries.png"]{
 img[src= "images/dark crevice.jpg"] {
     top: -10vh;
     object-fit: cover;
-    width: 100vw;
     height: 100vh;
     filter: brightness(0.4);
     object-position: center 80%;
@@ -136,6 +140,7 @@ img[src= "images/dark crevice.jpg"] {
 img[src="images/Blade Closeup.png"]{
     height: 50vh;
     width: 50vh;
+    bottom: 0;
 }
 .blade-closeup h1, .blade-closeup p{
     position: relative;
@@ -154,12 +159,21 @@ img[src="images/Blade Closeup.png"]{
     justify-content: center;
     display: flex;
 }
+/* For the camera closeup */
+.camera-closeup{
+}
 @media screen and (min-width: 800px) {
     
     header>h1{
         font-size: 13px;
     }
     /* For the hero section */
+    section h1{
+        font-size: calc(16px + 1.4vw);
+    }
+    section p {
+        font-size: 16px + 0.7vw;
+    }
     .hero{
         height: auto;
     }
@@ -193,15 +207,10 @@ img[src="images/Blade Closeup.png"]{
         margin: 0;
         padding:0;
     }   
-    img[src = "images/Curvature Display.png"]{
-        position: relative;
-        width: 45vw;
-        left: 45vw;
-
-    }
     .flex{
         display:flex;
-        justify-content: space-around;
+        justify-content:center;
+        gap: 13vw;
         align-items: center;
         order: 2
     }
@@ -210,35 +219,39 @@ img[src="images/Blade Closeup.png"]{
         flex-direction: column;
     }
     /* For the curvature-display */
+    img[src = "images/Curvature Display.png"]{
+        position: relative;
+        width: 35vw;
+        left: 45vw;
+    }
     .curvature-display h1{
         text-align: center;
         padding-top: 40px;
-        font-size: calc(16px + 2.5vw);
         order: 0;
     }  
     .curvature-display img{
         position: static;
+        margin-top: 20px;
         order: 1;
     } 
     .curvature-display p{
         border-bottom: 0px;
     }
     img[src="images/DingleBerries.png"]{
-        height: 20vw;
-        width: 20vw;
+        height: 13vw;
+        width: 13vw;
         padding: 2vw;
         order: 0;
         object-fit: cover;
-        border: black dashed 3px;
+        border: rgb(51, 8, 8) dashed 3px;
         border-radius: 50%;
         object-position: 47% center;
         position: relative;
-        bottom: 20vh;
+        top: 0;
         left: 10vw;
         box-shadow: 0px 0px 37px 7px rgba(0,0,0,0.1);
     }
     .shadow > p {
-        order: 1;
         margin-bottom: -8vh;
         font-size: calc(8px + 1.5vw);
     }
@@ -248,7 +261,6 @@ img[src="images/Blade Closeup.png"]{
         height: 85vh;
     }
     img[src="images/Blade Closeup.png"]{
-        position: absolute;
         width: min(40vw, 80vh);
         height: auto;
         left: calc(calc(45vw - min(40vw, 80vh))/2)
@@ -272,5 +284,15 @@ img[src="images/Blade Closeup.png"]{
     .blade-closeup h1{
         margin-top: 30vh;
     }
-
+    .camera-closeup{
+        flex-direction: row;
+    }
+    .camera-closeup h1, .camera-closeup p {
+        text-align: left;
+        padding-left: 20px;
+    }
+    img[src = "images/Camera-Close-Up.png" ]{
+        width: 30vw;
+        margin: 40px;
+    }
   }
