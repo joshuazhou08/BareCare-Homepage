@@ -30,6 +30,9 @@ ul{
 .absolute{
     position: absolute;
 }
+.flex{
+    display:flex;
+}
 img[src="images/Logo.png"]{
     display: none;
 }
@@ -134,9 +137,8 @@ img[src= "images/dark crevice.jpg"] {
     object-position: center 80%;
 }
 img[src="images/Blade Closeup.png"]{
-    width: 100vw;
-    left: 0;
-    bottom:0;
+    height: 50vh;
+    width: 50vh;
 }
 .blade-closeup h1, .blade-closeup p{
     position: relative;
@@ -150,6 +152,9 @@ img[src="images/Blade Closeup.png"]{
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
     position: relative;
     z-index: 1;
+}
+.blade-closeup > .flex {
+    justify-content: center;
 }
 @media screen and (min-width: 800px) {
     
