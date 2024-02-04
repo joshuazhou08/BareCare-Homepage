@@ -2,6 +2,7 @@
 :root{
     --darkgray: rgb(12, 12, 12);
     --darkblue: rgb(2, 4, 10);
+    --lightblue: rgb(204, 236, 238)
 }
 /* Feature Classes */
 .shadow{
@@ -12,6 +13,7 @@
 }
 .full-width{
     width: 100vw;
+    display: block;
 }
 /* End of Feature Classes */
 body{
@@ -108,7 +110,7 @@ section p{
     font-size: 1.7rem;
     padding: 0 75px 0;
     text-align: center;
-    margin: 0;
+    margin: 0 0 14px;
 }
 /* For the curvature-display */
 .curvature-display{
@@ -163,8 +165,29 @@ img[src="images/Blade Closeup.png"]{
     justify-content: center;
     display: flex;
 }
-/* For the camera closeup */
-.camera-closeup{
+/* For The Iphone App */
+
+.iphone-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iphone-app > div{
+    position: relative;
+    z-index: 1;
+}
+img[src="images/iphone app.png"]{
+    height: 60vh;
+    margin-top: 25px;
+    z-index: 1
+}
+img[src="images/ice-355422.jpg"]{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
 }
 @media screen and (min-width: 800px) {
     
@@ -174,6 +197,7 @@ img[src="images/Blade Closeup.png"]{
     /* For the hero section */
     section h1{
         font-size: calc(16px + 1.4vw);
+        padding: 0;
     }
     section p {
         font-size: 16px + 0.7vw;
@@ -214,9 +238,7 @@ img[src="images/Blade Closeup.png"]{
     .flex{
         display:flex;
         justify-content:center;
-        gap: 13vw;
         align-items: center;
-        order: 2
     }
     .shadow {
         display: flex;
@@ -227,6 +249,9 @@ img[src="images/Blade Closeup.png"]{
         position: relative;
         width: 35vw;
         left: 45vw;
+    }
+    .curvature-display .flex{
+        gap: 13vw;
     }
     .curvature-display h1{
         text-align: center;
@@ -240,6 +265,7 @@ img[src="images/Blade Closeup.png"]{
     } 
     .curvature-display p{
         border-bottom: 0px;
+        margin-bottom: 10px;
     }
     img[src="images/DingleBerries.png"]{
         height: 13vw;
@@ -254,10 +280,6 @@ img[src="images/Blade Closeup.png"]{
         top: 0;
         left: 10vw;
         box-shadow: 0px 0px 37px 7px rgba(0,0,0,0.1);
-    }
-    .shadow > p {
-        margin-bottom: -8vh;
-        font-size: calc(8px + 1.5vw);
     }
     /* For the blade closeup */
     .blade-closeup{
@@ -288,8 +310,10 @@ img[src="images/Blade Closeup.png"]{
     .blade-closeup h1{
         margin-top: 30vh;
     }
+    /*For Camera Closeup */
     .camera-closeup{
         flex-direction: row;
+        gap: 15px;
     }
     .camera-closeup h1, .camera-closeup p {
         text-align: left;
@@ -298,5 +322,37 @@ img[src="images/Blade Closeup.png"]{
     img[src = "images/Camera-Close-Up.png" ]{
         width: 30vw;
         margin: 40px;
+        border: solid 2px var(--darkblue);
+        border-radius: 15px;
+    }
+    /* For The Iphone App */
+    .iphone-app{
+        display: block;
+        background-color: var(--lightblue);
+        height: 80vh;
+    }
+    .iphone-app>div{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .iphone-app p, .iphone-app h1{
+        text-align: left;
+        margin-left: 45vw;
+        padding: 0 75px;
+    }
+    img[src="images/iphone app.png"]{
+        box-sizing: border-box;
+        height: 70vh;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: calc(calc(45vw - 42vh) /2);
+    }
+    img[src="images/ice-355422.jpg"]{
+        height: 100%;
+        width: 45vw;
+        left: 0;
     }
   }
