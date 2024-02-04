@@ -4,6 +4,9 @@
     --darkblue: rgb(2, 4, 10);
     --lightblue: rgb(204, 236, 238)
 }
+body{
+    overflow-x: hidden;
+}
 /* Feature Classes */
 .shadow{
     box-shadow: inset 0px 0px 45px 0.8vh rgba(0,0,0,0.1);
@@ -101,7 +104,7 @@ section{
 section h1{
     margin-top: 0;
     margin-bottom: 14px;
-    padding: 50px 20px 0;
+    padding: 20px 20px 0;
     font-size: 3rem;
     text-align: center;
     
@@ -173,12 +176,13 @@ img[src="images/Blade Closeup.png"]{
     align-items: center;
 }
 .iphone-app > div{
+    background-color: rgba(255, 255, 255, 0.247);
     position: relative;
     z-index: 1;
+    margin-bottom: 4vh;
 }
 img[src="images/iphone app.png"]{
     height: 60vh;
-    margin-top: 25px;
     z-index: 1
 }
 img[src="images/ice-355422.jpg"]{
@@ -299,6 +303,10 @@ img[src="images/ice-355422.jpg"]{
     }
     .blade-closeup>div:first-child{
         background: transparent;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: min(40vw, 80vh)
     }
     .blade-closeup h1, .blade-closeup p{
         position: static;
@@ -306,9 +314,6 @@ img[src="images/ice-355422.jpg"]{
         text-align: left;
         margin-left: 45vw;
         padding: 0 40px 0;
-    }
-    .blade-closeup h1{
-        margin-top: 30vh;
     }
     /*For Camera Closeup */
     .camera-closeup{
@@ -336,6 +341,7 @@ img[src="images/ice-355422.jpg"]{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: transparent;
     }
     .iphone-app p, .iphone-app h1{
         text-align: left;
@@ -347,7 +353,7 @@ img[src="images/ice-355422.jpg"]{
         height: 70vh;
         width: auto;
         position: absolute;
-        top: 0;
+        top: 5vh;
         left: calc(calc(45vw - 42vh) /2);
     }
     img[src="images/ice-355422.jpg"]{
