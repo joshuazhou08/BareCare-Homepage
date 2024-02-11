@@ -182,8 +182,9 @@ img[src="images/Blade Closeup.png"]{
     margin-bottom: 4vh;
 }
 img[src="images/iphone app.png"]{
-    height: 60vh;
-    z-index: 1
+    height: 50vh;
+    z-index: 1;
+    margin-bottom: 10vh;
 }
 img[src="images/ice-355422.jpg"]{
     position: absolute;
@@ -192,6 +193,12 @@ img[src="images/ice-355422.jpg"]{
     height: 100vh;
     object-fit: cover;
     z-index: 0;
+}
+/*For Newsletter */
+img[src="images/Uranus.jpeg"]{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 @media screen and (min-width: 800px) {
     
@@ -288,7 +295,7 @@ img[src="images/ice-355422.jpg"]{
     /* For the blade closeup */
     .blade-closeup{
         background-color: var(--darkblue);
-        height: 85vh;
+        height: calc(10vh + 30vw);
     }
     img[src="images/Blade Closeup.png"]{
         width: min(40vw, 80vh);
@@ -296,7 +303,7 @@ img[src="images/ice-355422.jpg"]{
         left: calc(calc(45vw - min(40vw, 80vh))/2)
     }
     img[src= "images/dark crevice.jpg"] {
-        height: 120vh;
+        height: 100vh;
         width: 45vw;
         left: 0;
         bottom: 20vh;
@@ -334,10 +341,12 @@ img[src="images/ice-355422.jpg"]{
     .iphone-app{
         display: block;
         background-color: var(--lightblue);
-        height: 80vh;
+        
+        --height: calc(min(60vw, 70vh));
+        height: calc(var(--height) + 10vh);
     }
     .iphone-app>div{
-        height: 80vh;
+        height:var(--height);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -350,14 +359,14 @@ img[src="images/ice-355422.jpg"]{
     }
     img[src="images/iphone app.png"]{
         box-sizing: border-box;
-        height: 70vh;
+        height: min(60vw, 70vh);
         width: auto;
         position: absolute;
         top: 5vh;
-        left: calc(calc(45vw - 42vh) /2);
+        left: calc(calc(45vw - calc(var(--height) / 1.67)) /2);
     }
     img[src="images/ice-355422.jpg"]{
-        height: 100%;
+        height: calc(var(--height) + 10vh);
         width: 45vw;
         left: 0;
     }
