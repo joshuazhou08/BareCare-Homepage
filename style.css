@@ -4,6 +4,9 @@
     --darkblue: rgb(2, 4, 10);
     --lightblue: rgb(204, 236, 238)
 }
+.background-fade-down{
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); ;
+}
 body{
     overflow-x: hidden;
 }
@@ -107,6 +110,8 @@ section h1{
     padding: 20px 20px 0;
     font-size: 3rem;
     text-align: center;
+    z-index: 1;
+    position: relative;
     
 }
 section p{
@@ -114,6 +119,8 @@ section p{
     padding: 0 75px 0;
     text-align: center;
     margin: 0 0 14px;
+    z-index: 1;
+    position: relative;
 }
 /* For the curvature-display */
 .curvature-display{
@@ -167,6 +174,7 @@ img[src="images/Blade Closeup.png"]{
 .blade-closeup > .flex {
     justify-content: center;
     display: flex;
+
 }
 /* For The Iphone App */
 
@@ -174,6 +182,7 @@ img[src="images/Blade Closeup.png"]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 .iphone-app > div{
     background-color: rgba(255, 255, 255, 0.247);
@@ -182,7 +191,7 @@ img[src="images/Blade Closeup.png"]{
     margin-bottom: 4vh;
 }
 img[src="images/iphone app.png"]{
-    height: 50vh;
+    height: 70vh;
     z-index: 1;
     margin-bottom: 10vh;
 }
@@ -195,10 +204,56 @@ img[src="images/ice-355422.jpg"]{
     z-index: 0;
 }
 /*For Newsletter */
+.newsletter{
+    color: white;
+}
+.newsletter h1{
+    padding-top: 50px;
+}
+.newsletter :not(img){
+    position: relative;
+    z-index: 1;
+}
+form{
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+#email, #comment{
+    width: 70vw;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.514);
+    color: white;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    resize: none;
+}
+#email{
+    height: 4vh;
+}
+
+.newsletter ::placeholder{
+    font-size: 24px;
+    color: white;
+}
 img[src="images/Uranus.jpeg"]{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+.newsletter button {
+    width: 20vw;
+    border-radius: 12px;
+    font-size: 24px;
+    padding: 8px;
+    font-family: 'Oswald', sans-serif
 }
 @media screen and (min-width: 800px) {
     
@@ -369,5 +424,10 @@ img[src="images/Uranus.jpeg"]{
         height: calc(var(--height) + 10vh);
         width: 45vw;
         left: 0;
+
+    }
+    /*For Newsletter*/
+    .newsletter button{
+        align-self: center;
     }
   }
