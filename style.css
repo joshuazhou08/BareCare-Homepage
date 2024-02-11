@@ -2,7 +2,8 @@
 :root{
     --darkgray: rgb(12, 12, 12);
     --darkblue: rgb(2, 4, 10);
-    --lightblue: rgb(204, 236, 238)
+    --lightblue: rgb(204, 236, 238);
+    --fullheight: calc(100vh - 70px);
 }
 .background-fade-down{
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); ;
@@ -30,13 +31,16 @@ a{
     text-decoration: none;
     color: white;
 }
+li{
+    cursor: pointer;
+}
 header{
     padding: 3px 0;
     background-color: rgb(193, 193, 204);
 }
 header>h1{
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
 }
 ul{
     padding-left: 0px;
@@ -50,6 +54,7 @@ img[src="images/Logo.png"]{
 nav{
     position: sticky;
     top: 0;
+    font-size: 20px;
     z-index: 10;
     height: 70px;
     display: flex;
@@ -107,7 +112,7 @@ section{
 section h1{
     margin-top: 0;
     margin-bottom: 14px;
-    padding: 20px 20px 0;
+    padding: 40px 40px 0;
     font-size: 3rem;
     text-align: center;
     z-index: 1;
@@ -149,7 +154,7 @@ img[src="images/DingleBerries.png"]{
 img[src= "images/dark crevice.jpg"] {
     top: -10vh;
     object-fit: cover;
-    height: 100vh;
+    height: var(--fullheight);
     filter: brightness(0.4);
     object-position: center 80%;
 }
@@ -182,7 +187,7 @@ img[src="images/Blade Closeup.png"]{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: var(--fullheight);
 }
 .iphone-app > div{
     background-color: rgba(255, 255, 255, 0.247);
@@ -191,7 +196,7 @@ img[src="images/Blade Closeup.png"]{
     margin-bottom: 4vh;
 }
 img[src="images/iphone app.png"]{
-    height: 70vh;
+    height: 60vh;
     z-index: 1;
     margin-bottom: 10vh;
 }
@@ -199,13 +204,14 @@ img[src="images/ice-355422.jpg"]{
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: var(--fullheight);
     object-fit: cover;
     z-index: 0;
 }
 /*For Newsletter */
 .newsletter{
     color: white;
+    height: var(--fullheight);
 }
 .newsletter h1{
     padding-top: 50px;
@@ -215,7 +221,7 @@ img[src="images/ice-355422.jpg"]{
     z-index: 1;
 }
 form{
-    margin-top: 16px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -242,23 +248,26 @@ form{
 }
 img[src="images/Uranus.jpeg"]{
     width: 100vw;
-    height: 90vh;
+    height: var(--fullheight);
     object-fit: cover;
     position: absolute;
     top: 0;
     z-index: 0;
 }
 .newsletter button {
-    width: 20vw;
+    width: 50vw;
     border-radius: 12px;
     font-size: 24px;
     padding: 8px;
-    font-family: 'Oswald', sans-serif
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
 }
 @media screen and (min-width: 800px) {
     
     header>h1{
-        font-size: 13px;
+        font-size: 16px;
     }
     /* For the hero section */
     section h1{
@@ -358,7 +367,7 @@ img[src="images/Uranus.jpeg"]{
         left: calc(calc(45vw - min(40vw, 80vh))/2)
     }
     img[src= "images/dark crevice.jpg"] {
-        height: 100vh;
+        height: var(--fullheight);
         width: 45vw;
         left: 0;
         bottom: 20vh;
@@ -426,8 +435,5 @@ img[src="images/Uranus.jpeg"]{
         left: 0;
 
     }
-    /*For Newsletter*/
-    .newsletter button{
-        align-self: center;
-    }
+
   }
