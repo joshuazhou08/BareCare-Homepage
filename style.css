@@ -250,6 +250,7 @@ img[src="images/Uranus.jpeg"]{
     align-self: center;
     background-color: white;
     margin-bottom: 45px;
+    color: black;
 }
 @media screen and (min-width: 800px) {
     
