@@ -95,7 +95,7 @@ img[src="images/Hero Image Background.png"]{
 img[src="images/Hero Image Foreground.png"]{
     height: auto;
     object-fit: cover;
-    width: 100%;
+    width: 80%;
     bottom: -5vh;
 }
 section{
@@ -208,30 +208,27 @@ img[src="images/iphone app.png"]{
     z-index: 1;
 }
 form{
-    margin: 45px 0 0;
+    margin: 16px 0 0;
     display: flex;
     flex-wrap: wrap;
-    gap: calc(12px + 2vh);
+    gap: 12px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
-#email, #comment{
+#username, #email, #comment{
     width: 70vw;
-    padding: 16px;
+    padding: 8px 12px;
+    border: rgb(34, 34, 34) solid 1px;
     background: rgba(0, 0, 0, 0.514);
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-family: 'Oswald', sans-serif;
     resize: none;
 }
-#email{
-    height: 4vh;
-}
-
 .newsletter ::placeholder{
     font-size: 24px;
-    color: white;
+    color: rgba(255, 255, 255, 0.61);
 }
 
 .newsletter button {

@@ -1,3 +1,5 @@
+
+
 const newsletter_link = document.querySelector('#newsletter-link')
 
 const newsletter = document.querySelector(".newsletter")
@@ -19,3 +21,5 @@ const hiddenElements = document.querySelectorAll(".hidden")
 hiddenElements.forEach((element) => {
     observer.observe(element);
 })
+
+
