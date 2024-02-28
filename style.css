@@ -95,7 +95,7 @@ img[src="images/Hero Image Background.png"]{
 img[src="images/Hero Image Foreground.png"]{
     height: auto;
     object-fit: cover;
-    width: 80%;
+    width: 100%;
     bottom: -5vh;
 }
 section{
