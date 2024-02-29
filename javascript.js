@@ -22,4 +22,26 @@ hiddenElements.forEach((element) => {
     observer.observe(element);
 })
 
+//Nav bar hidden when scrolling down
+const navbar = document.querySelector("nav")
+let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+      const currentScrollTop = window.scrollY;
+
+      if (currentScrollTop > 200){
+
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.style.transform = "translateY(-100%)";
+            navbar.style.opacity = '0';
+        } else {
+            // Scrolling up
+            navbar.style.transform = "translateY(0)";
+            navbar.style.opacity = '1';
+        }
+
+        lastScrollTop = currentScrollTop;
+    }
+    });
 

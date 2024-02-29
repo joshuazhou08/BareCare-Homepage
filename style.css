@@ -25,7 +25,8 @@ body{
 /* End of Feature Classes */
 body{
     margin: 0;
-    font-family: 'Oswald', sans-serif
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
 }
 a{
     text-decoration: none;
@@ -59,13 +60,15 @@ nav{
     top: 0;
     font-size: 16px;
     z-index: 10;
-    height: 70px;
+    height: 60px;
     display: flex;
     padding: 0 7vw;
     justify-content: space-between;
     align-items: center;
     background-color: var(--darkgray);
     color: white;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
 }
 nav>div:first-of-type{
     display: flex;
