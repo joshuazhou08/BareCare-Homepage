@@ -53,7 +53,7 @@ ul{
     display:none;
 }
 img[src="images/Logo.png"]{
-    height: 2.6em;
+    height: 2.4em;
 }
 nav{
     position: sticky;
@@ -268,7 +268,8 @@ form{
     }
     img[src="images/Logo.png"]{
         display: block;
-        width: 4.8rem;
+        height: 2.4em;
+        width: auto;
     }
     img[src="images/Hero Image Background.png"]{
         width: 100vw;
